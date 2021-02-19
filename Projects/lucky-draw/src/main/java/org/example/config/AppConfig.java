@@ -25,7 +25,7 @@ public class AppConfig implements WebMvcConfigurer, InitializingBean {
     private ObjectMapper objectMapper;
 
     @Resource
-    private RequestMappingHandlerAdapter adapter;
+    private RequestMappingHandlerAdapter adapter;//调用处理器的映射方法
 
     //之前以@ControllerAdvice+实现ResponseBodyAdvice接口，完成统一处理返回数据包装：无法解决返回值为null需要包装
     //改用现在这种方式，可以解决返回null包装为自定义类型
