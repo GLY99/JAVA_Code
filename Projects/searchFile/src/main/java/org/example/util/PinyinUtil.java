@@ -10,9 +10,9 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 public class PinyinUtil {
     public static String getPinyin(String name){
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
-        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
-        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
-        format.setVCharType(HanyuPinyinVCharType.WITH_V);
+        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);//声调设置(无声调设置)
+        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);//设置大小写
+        format.setVCharType(HanyuPinyinVCharType.WITH_V);//特殊拼音的显示格式
         StringBuffer sb = new StringBuffer();
         for (char ch : name.toCharArray()){
             try {
@@ -30,9 +30,9 @@ public class PinyinUtil {
     }
     public static String getPinyinFirst(String name){
         HanyuPinyinOutputFormat format = new HanyuPinyinOutputFormat();
-        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
-        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);
-        format.setVCharType(HanyuPinyinVCharType.WITH_V);
+        format.setToneType(HanyuPinyinToneType.WITHOUT_TONE);//声调设置(无声调设置)
+        format.setCaseType(HanyuPinyinCaseType.LOWERCASE);//设置大小写
+        format.setVCharType(HanyuPinyinVCharType.WITH_V);//特殊拼音的显示格式
         StringBuffer sb = new StringBuffer();
         for (char ch : name.toCharArray()){
             try {
