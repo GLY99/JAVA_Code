@@ -14,6 +14,7 @@ import java.util.List;
 public class QueryDAO {
     //通过关键字进行模糊匹配查询
     public List<FileMeta> query(String keyword){
+
         try {
             Connection c = DBUtil.getConnection();
             String sql = "SELECT id, name, pinyin,pinyin_first,path, is_directory, size, last_modified FROM file_meta WHERE name LIKE ? OR pinyin LIKE ? OR pinyin_first LIKE ?";

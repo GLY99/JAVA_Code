@@ -29,7 +29,6 @@ public class Main extends Application {
         primaryStage.getIcons().add(new Image(path));//设置图标
         primaryStage.show();
     }
-
     public static void main(String[] args) {
         DBService dbService = new DBService();
         dbService.Init();

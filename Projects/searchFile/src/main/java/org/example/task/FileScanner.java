@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class FileScanner {
     private final FileService fileService = new FileService();
     //线程池
-    private ExecutorService threadPool = new ThreadPoolExecutor(4,4,0, TimeUnit.SECONDS,new ArrayBlockingQueue<>(10));
+    private ExecutorService threadPool = new ThreadPoolExecutor(10,10,0, TimeUnit.SECONDS,new LinkedBlockingQueue<>());
     private CountDownLatch flag = new CountDownLatch(1);//信号量
     private AtomicInteger count = new AtomicInteger();//任务数
     //文件扫描
