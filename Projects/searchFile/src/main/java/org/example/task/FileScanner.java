@@ -21,6 +21,8 @@ public class FileScanner {
         count.incrementAndGet();//任务数增加
         threadPool.execute(jod);//将任务加入线程池
         flag.await();
+        //任务结束
+        threadPool.shutdown();//关闭线程池
     }
     //扫描任务
     private class ScanJod implements Runnable{
